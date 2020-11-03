@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as Highcharts from 'highcharts';
 @Component({
   selector: 'app-assignment2',
   templateUrl: './assignment2.component.html',
@@ -12,4 +12,5 @@ export class Assignment2Component implements OnInit {
   ngOnInit(): void {
   }
 
+ 
 }
