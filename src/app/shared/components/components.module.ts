@@ -5,6 +5,7 @@ import { HeaderTemplateComponent } from "./header-template/header-template.compo
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { StackedColumnChartComponent } from './stacked-column-chart/stacked-column-chart.component';
 import { TimeChartComponent } from './time-chart/time-chart.component';
+import { MicroChartComponent } from './micro-chart/micro-chart.component';
 
 export const COMPONENTS = [
   //HTML page header component
@@ -13,7 +14,8 @@ export const COMPONENTS = [
   // Charts and Map Component
   LineChartComponent,
   StackedColumnChartComponent,
-  TimeChartComponent
+  TimeChartComponent,
+  MicroChartComponent
 ];
 
 @NgModule({
