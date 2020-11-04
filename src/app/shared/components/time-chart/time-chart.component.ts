@@ -72,20 +72,24 @@ export class TimeChartComponent implements OnInit {
       series.dataFields.valueY = "km";
       series.tooltipText = "{valueY.value}"
       series.columns.template.strokeOpacity = 0;
-    
+
       series.columns.template.width = am4core.percent(17);
-      
+
+      let gradient = new am4core.LinearGradient();
+      gradient.addColor(am4core.color("#fdda98"));
+      gradient.addColor(am4core.color("#f0ac97"));
+      gradient.addColor(am4core.color("#ff95a4"));
+      gradient.addColor(am4core.color("#64c7e7"));
+
+      gradient.rotation = 90;
+      series.columns.template.fill = gradient;
+
       let labelBullet = series.bullets.push(new am4charts.LabelBullet());
       labelBullet.label.verticalCenter = "bottom";
       labelBullet.label.dy = -10;
       labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.')}";
 
       chart.zoomOutButton.disabled = true;
-
-      // as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
-      series.columns.template.adapter.add("fill", function (fill, target) {
-        return chart.colors.getIndex(target.dataItem.index);
-      });
     });
   }
 

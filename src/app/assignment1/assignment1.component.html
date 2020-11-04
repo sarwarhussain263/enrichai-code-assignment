@@ -1,9 +1,84 @@
-<app-line-chart [data]="lineChartData" [width]="'30%'" [height]="'250px'"></app-line-chart>
+<div id="dashboard">
+    <div class="dashgrid">
+        <div class="fontsty">
+            <div class="iconsize"><i class="fa fa-bell" aria-hidden="true"></i></div>
+            <h4>Alarms:</h4>
+            <h2>20</h2>
+        </div>
+    </div>
 
-<app-stacked-column-chart [width]="'30%'" [height]="'250px'"></app-stacked-column-chart>
+    <div class="dashgrid">
+        <div class="fontsty">
+            <div class="iconsize"><i class="fa fa-check-circle-o" aria-hidden="true"></i></div>
+            <h4>Total Online:</h4>
+            <h2>20</h2>
+        </div>
+    </div>
 
-<app-micro-chart [width]="'30%'" [height]="'250px'"></app-micro-chart>
+    <div class="dashgrid">
+        <div class="fontsty">
+            <div class="iconsize"><i class="fa fa-taxi" aria-hidden="true"></i></div>
+            <h4>Total Trips:</h4>
+            <h2>20</h2>
+        </div>
+    </div>
 
-<app-time-chart [width]="'30%'" [height]="'250px'"></app-time-chart> 
+    <div class="dashgrid">
+        <div class="fontsty">
+            <div class="iconsize"><i class="fa fa-sellsy" aria-hidden="true"></i></div>
+            <h4>Total Distance:</h4>
+            <h2>20</h2>
+        </div>
+    </div>
 
+    <div class="dashgrid">
+        <div class="fontsty">
+            <div class="iconsize"><i class="fa fa-opencart" aria-hidden="true"></i></div>
+            <h4>ON Hours</h4>
+            <h2>20</h2>
+        </div>
+    </div>
 
+    <div class="dashgrid">
+        <div class="fontsty">
+            <div class="iconsize"><i class="fa fa-compress" aria-hidden="true"></i></div>
+            <h4>Fuel Consumed</h4>
+            <h2>20</h2>
+        </div>
+    </div>
+</div>
+
+<div style="clear:both;"></div>
+
+<!-- <div style="width:100%;background-color:#e4e4e4;height:15px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <app-line-chart [data]="lineChartData" [width]="'100%'" [height]="'350px'"></app-line-chart>
+        </div>
+        <div class="col-6">
+            <app-stacked-column-chart [width]="'100%'" [height]="'350px'"></app-stacked-column-chart>
+        </div>
+        <div class="col-6">
+            <app-micro-chart [width]="'100%'" [height]="'350px'"></app-micro-chart>
+        </div>
+        
+        <div class="col-6">
+            <app-time-chart [width]="'100%'" [height]="'350px'"></app-time-chart>
+        </div>
+    </div>
+</div>

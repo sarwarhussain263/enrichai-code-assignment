@@ -88,8 +88,8 @@ export class MicroChartComponent implements OnInit {
     series.tensionX = 0.8;
 
     let gradient = new am4core.LinearGradient();
-    gradient.addColor(am4core.color("orange"));
-    gradient.addColor(am4core.color("yellow"));
+    gradient.addColor(am4core.color("#ff5d02"));
+    gradient.addColor(am4core.color("#ffc140"));
     gradient.rotation = 90;
     series.fill = gradient;
 

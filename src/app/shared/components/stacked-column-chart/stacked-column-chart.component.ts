@@ -77,7 +77,16 @@ export class StackedColumnChartComponent implements OnInit {
 
       // Legend
       let chartLegends = chart.legend = new am4charts.Legend();
-      chartLegends.position  = "top";
+      chartLegends.position = "bottom";
+
+      chart.colors.list = [
+        am4core.color("#845EC2"),
+        am4core.color("#D65DB1"),
+        am4core.color("#FF6F91"),
+        am4core.color("#FF9671"),
+        am4core.color("#FFC75F"),
+        am4core.color("#F9F871")
+      ];
 
     });
   }
@@ -91,6 +100,7 @@ export class StackedColumnChartComponent implements OnInit {
     series.dataFields.valueY = field;
     series.dataFields.categoryX = "year";
     series.sequencedInterpolation = true;
+//series
 
     // Make it stacked
     series.stacked = true;
