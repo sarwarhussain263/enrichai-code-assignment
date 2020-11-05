@@ -11,11 +11,11 @@
 }
 
 .fontsty h4 {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 5px;
     text-align: left;
-    margin-left: 30px;
-    margin-bottom: 15px;
+    margin-left: 20px;
+    /* margin-bottom: 15px; */
 }
 
 @media(min-width:320px) {
@@ -42,7 +42,7 @@
         text-align: right;
         padding-right: 36px;
         padding-top: 15px;
-        font-size: 63px;
+        font-size: 40px;
         color: #ececec;
     }
     .iconsize:hover {
@@ -74,7 +74,7 @@
         text-align: right;
         padding-right: 36px;
         padding-top: 15px;
-        font-size: 63px;
+        font-size: 40px;
         color: #ececec;
     }
     .iconsize:hover {
@@ -87,7 +87,7 @@
         box-shadow: 1px 2px 8px 0px #f1f1f1;
         background-color: white;
         border-radius: 8px;
-        width: 15%;
+        width: 12%;
         margin-right: 14px;
         float: left;
         color: #000000;
@@ -96,7 +96,7 @@
         box-shadow: 1px 2px 8px 0px #ff0000;
         background-color: red;
         border-radius: 8px;
-        width: 15%;
+        width: 12%;
         margin-right: 14px;
         float: left;
         color: #ffffff;
@@ -105,7 +105,7 @@
         text-align: right;
         padding-right: 36px;
         padding-top: 15px;
-        font-size: 63px;
+        font-size: 40px;
         color: #ececec;
     }
     .iconsize:hover {
@@ -114,11 +114,14 @@
 }
 
 @media(min-width:1200px) {
+    #dashboard {
+        margin-left: 18%
+    }
     .dashgrid {
         box-shadow: 1px 2px 8px 0px #f1f1f1;
         background-color: white;
         border-radius: 8px;
-        width: 15%;
+        width: 12%;
         margin-right: 14px;
         float: left;
         color: #000000;
@@ -127,7 +130,7 @@
         box-shadow: 1px 2px 8px 0px #ff0000;
         background-color: red;
         border-radius: 8px;
-        width: 15%;
+        width: 12%;
         margin-right: 14px;
         float: left;
         color: #ffffff;
@@ -136,7 +139,7 @@
         text-align: right;
         padding-right: 36px;
         padding-top: 15px;
-        font-size: 63px;
+        font-size: 40px;
         color: #ececec;
     }
     .iconsize:hover {
