@@ -6,7 +6,7 @@ import { IndexComponent } from './index/index.component';
 import { Assignment1Component } from './assignment1/assignment1.component';
 import { Assignment2Component } from './assignment2/assignment2.component';
 import { ComponentsModule } from './shared/components/components.module';
-//import { HttpClientModule } from '@angular/common/http';
+/* import { AgmCoreModule } from '@agm/core'; */
 
 const routes: Routes = [
   { path: "", component: IndexComponent },
@@ -24,7 +24,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     CommonModule,
     ComponentsModule,
-//    HttpClientModule
+/*     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCVxTkm-hptMX7sPojUC1FWS-fNRNUr4hg'
+    }) */
   ],
   exports: [RouterModule]
 })

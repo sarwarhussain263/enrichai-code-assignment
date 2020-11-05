@@ -9,6 +9,82 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVxTkm-hptMX7sPojUC1FWS-fNRNUr4hg"></script>
+
+    <script>
+        function initMap() {
+            var map;
+            var bounds = new google.maps.LatLngBounds();
+            var mapOptions = {
+                mapTypeId: 'roadmap'
+            };
+
+            // Display a map on the web page
+            map = new google.maps.Map(document.getElementById("mapCanvas"), mapOptions);
+            map.setTilt(50);
+
+            // Multiple markers location, latitude, and longitude
+            var markers = [
+                ['Brooklyn Museum, NY', 40.671531, -73.963588],
+                ['Brooklyn Public Library, NY', 40.672587, -73.968146],
+                ['Prospect Park Zoo, NY', 40.665588, -73.965336]
+            ];
+
+            // Info window content
+            var infoWindowContent = [
+                ['<div class="info_content">' +
+                    '<h3>Brooklyn Museum</h3>' +
+                    '<p>The Brooklyn Museum is an art museum located in the New York City borough of Brooklyn.</p>' + '<button onclick=document.getElementById().click(); class=btn btn-primary>Express</button></div>'
+                ],
+                ['<div class="info_content">' +
+                    '<h3>Brooklyn Public Library</h3>' +
+                    '<p>The Brooklyn Public Library (BPL) is the public library system of the borough of Brooklyn, in New York City.</p>' +
+                    '</div>'
+                ],
+                ['<div class="info_content">' +
+                    '<h3>Prospect Park Zoo</h3>' +
+                    '<p>The Prospect Park Zoo is a 12-acre (4.9 ha) zoo located off Flatbush Avenue on the eastern side of Prospect Park, Brooklyn, New York City.</p>' +
+                    '</div>'
+                ]
+            ];
+
+            // Add multiple markers to map
+            var infoWindow = new google.maps.InfoWindow(),
+                marker, i;
+
+            // Place each marker on the map  
+            for (i = 0; i < markers.length; i++) {
+                var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+                bounds.extend(position);
+                marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    icon: './truck.png',
+                    title: markers[i][0]
+                });
+
+                // Add info window to marker    
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                        infoWindow.setContent(infoWindowContent[i][0]);
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
+
+                // Center the map to fit all markers on the screen
+                map.fitBounds(bounds);
+            }
+
+            // Set zoom level
+            var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+                this.setZoom(14);
+                google.maps.event.removeListener(boundsListener);
+            });
+
+        }
+        // Load initialize function
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
 </head>
 
 <body>
