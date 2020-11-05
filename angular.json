@@ -26,9 +26,7 @@
                         "styles": [
                             "src/styles.css"
                         ],
-                        "scripts": [
-                            "assets/map.js"
-                        ]
+                        "scripts": []
                     },
                     "configurations": {
                         "production": {
