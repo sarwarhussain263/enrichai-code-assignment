@@ -142,4 +142,8 @@
     .iconsize:hover {
         color: #ffffff;
     }
+    .chart-bg {
+        background-color: #e4e4e4;
+        margin: 10px;
+    }
 }

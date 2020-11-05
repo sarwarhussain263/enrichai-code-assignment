@@ -1,0 +1,145 @@
+.dashgrid {
+    font-family: calibri;
+}
+
+.fontsty h2 {
+    font-size: 35px;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.fontsty h4 {
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+@media(min-width:320px) {
+    .dashgrid {
+        box-shadow: 1px 2px 8px 0px #f1f1f1;
+        background-color: white;
+        border-radius: 8px;
+        width: 100%;
+        margin-right: 10px;
+        float: left;
+        margin-bottom: 15px;
+        color: #000000;
+    }
+    .dashgrid:hover {
+        box-shadow: 1px 2px 8px 0px #ff0000;
+        background-color: red;
+        border-radius: 8px;
+        width: 100%;
+        margin-right: 10px;
+        float: left;
+        color: #ffffff;
+    }
+    .iconsize {
+        text-align: right;
+        padding-right: 36px;
+        padding-top: 15px;
+        font-size: 63px;
+        color: #ececec;
+    }
+    .iconsize:hover {
+        color: #ffffff;
+    }
+}
+
+@media(min-width:768px) {
+    .dashgrid {
+        box-shadow: 1px 2px 8px 0px #f1f1f1;
+        background-color: white;
+        border-radius: 8px;
+        width: 30.99%;
+        margin-right: 14px;
+        float: left;
+        margin-bottom: 15px;
+        color: #000000;
+    }
+    .dashgrid:hover {
+        box-shadow: 1px 2px 8px 0px #ff0000;
+        background-color: red;
+        border-radius: 8px;
+        width: 30.99%;
+        margin-right: 14px;
+        float: left;
+        color: #ffffff;
+    }
+    .iconsize {
+        text-align: right;
+        padding-right: 36px;
+        padding-top: 15px;
+        font-size: 63px;
+        color: #ececec;
+    }
+    .iconsize:hover {
+        color: #ffffff;
+    }
+}
+
+@media(min-width:992px) {
+    .dashgrid {
+        box-shadow: 1px 2px 8px 0px #f1f1f1;
+        background-color: white;
+        border-radius: 8px;
+        width: 15%;
+        margin-right: 14px;
+        float: left;
+        color: #000000;
+    }
+    .dashgrid:hover {
+        box-shadow: 1px 2px 8px 0px #ff0000;
+        background-color: red;
+        border-radius: 8px;
+        width: 15%;
+        margin-right: 14px;
+        float: left;
+        color: #ffffff;
+    }
+    .iconsize {
+        text-align: right;
+        padding-right: 36px;
+        padding-top: 15px;
+        font-size: 63px;
+        color: #ececec;
+    }
+    .iconsize:hover {
+        color: #ffffff;
+    }
+}
+
+@media(min-width:1200px) {
+    .dashgrid {
+        box-shadow: 1px 2px 8px 0px #f1f1f1;
+        background-color: white;
+        border-radius: 8px;
+        width: 15%;
+        margin-right: 14px;
+        float: left;
+        color: #000000;
+    }
+    .dashgrid:hover {
+        box-shadow: 1px 2px 8px 0px #ff0000;
+        background-color: red;
+        border-radius: 8px;
+        width: 15%;
+        margin-right: 14px;
+        float: left;
+        color: #ffffff;
+    }
+    .iconsize {
+        text-align: right;
+        padding-right: 36px;
+        padding-top: 15px;
+        font-size: 63px;
+        color: #ececec;
+    }
+    .iconsize:hover {
+        color: #ffffff;
+    }
+}

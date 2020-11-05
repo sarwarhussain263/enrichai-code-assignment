@@ -50,35 +50,33 @@
 
 <div style="clear:both;"></div>
 
-<!-- <div style="width:100%;background-color:#e4e4e4;height:15px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                One of three columns
-            </div>
-            <div class="col-sm">
-                One of three columns
-            </div>
-            <div class="col-sm">
-                One of three columns
-            </div>
-        </div>
-    </div>
-</div> -->
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <app-line-chart [data]="lineChartData" [width]="'100%'" [height]="'350px'"></app-line-chart>
+            <div class="chart-bg">
+                <app-line-chart [width]="'100%'" [height]="'350px'"></app-line-chart>
+            </div>
         </div>
         <div class="col-6">
-            <app-stacked-column-chart [width]="'100%'" [height]="'350px'"></app-stacked-column-chart>
+            <div class="chart-bg">
+                <app-stacked-column-chart [width]="'100%'" [height]="'350px'"></app-stacked-column-chart>
+            </div>
         </div>
         <div class="col-6">
-            <app-micro-chart [width]="'100%'" [height]="'350px'"></app-micro-chart>
+            <div class="chart-bg">
+                <app-micro-chart [width]="'100%'" [height]="'350px'"></app-micro-chart>
+            </div>
         </div>
-        
+
         <div class="col-6">
-            <app-time-chart [width]="'100%'" [height]="'350px'"></app-time-chart>
+            <div class="chart-bg">
+                <app-time-chart [width]="'100%'" [height]="'350px'"></app-time-chart>
+            </div>
         </div>
+    </div>
+    <div style="clear:both;"></div>
+    <br>
+    <div style="text-align: center;">
+        <button type="button" [routerLink]="['/']" class="btn btn-primary">Back</button>
     </div>
 </div>
